@@ -6,18 +6,18 @@ h1 {
 }
 .container {
     text-align: center;
-    margin-top: 50px;
-    background-color: #f0f8ff48;
+    margin-top: 20px;
+    background-color: #ffffff48;
 }
 
 .buttons {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .number-btn {
-    padding: 10px 20px;
-    margin: 5px;
-    font-size: 16px;
+    padding: 6px 5px;
+    margin: 4px;
+    font-size: 18px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
@@ -27,8 +27,8 @@ h1 {
 
 
 #imagen1, #imagen2, #imagen3, #imagen4, #imagen5, #imagen6 {
-    width: 100px;
-    margin: 20px;
+    width: 50px;
+    margin: 5px;
 }
 
 
@@ -36,11 +36,10 @@ h1 {
     padding: 10px 20px;
     margin: 5px;
     font-size: 16px;
-    
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    color: rgb(255, 55, 55); }
+    color: rgb(255, 0, 0); }
 
 #instrucciones{
     padding: 10px;

@@ -58,14 +58,14 @@ document.addEventListener('DOMContentLoaded', function () {
         const imagen = document.createElement('img');
         imagen.src = `/imagenes/bitmap${numeroBoton}.png`;
         imagen.alt = 'imagen';
-        imagen.style.width = '70px';
+        imagen.style.width = '65px';
         contenedorImagen.appendChild(imagen);
 
         // Crear y mostrar la imagen "plus.png" después de cada imagen de número
         const plus = document.createElement('img');
         plus.src = '/imagenes/plus.png';
         plus.alt = 'plus';
-        plus.style.width = '50px'; // Ajusta el tamaño según tus necesidades
+        plus.style.width = '30px'; // Ajusta el tamaño según tus necesidades
         contenedorImagen.appendChild(plus);
     }
 
