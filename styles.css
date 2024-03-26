@@ -1,0 +1,126 @@
+body {
+    background-image: url(./imagenes/fondo.jpg);
+}
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.container {
+    text-align: center;
+    margin-top: 50px;
+    background-color: #f0f8ff48;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.number-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: white;
+} 
+
+
+
+#imagen1, #imagen2, #imagen3, #imagen4, #imagen5, #imagen6 {
+    width: 100px;
+    margin: 20px;
+}
+
+
+#jugar-btn { 
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: rgb(255, 55, 55); }
+
+#instrucciones{
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    color: blue
+}
+
+.hidden {
+    display: none;
+    width : 300px ;
+}
+
+#imagenManual {
+    width: 300px;
+}
+
+.number-btn {
+    width: 40px; /* Ancho ajustado para los botones de números */
+}
+
+.btn-1 {
+    background-color: red;
+}
+
+.btn-2 {
+    background-color: blue;
+}
+
+.btn-3 {
+    background-color: yellow;
+}
+
+.btn-4 {
+    background-color: purple;
+}
+
+.btn-5 {
+    background-color: green;
+}
+
+.btn-6 {
+    background-color: rgb(255, 108, 9);
+}
+
+ #player-choice, #computer-choice {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold; 
+}
+#timer {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+#partial-sum {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold; 
+
+}
+
+#contenedor_imagen {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+img {
+    width: 50px; /* Ajusta el tamaño según tus necesidades */
+     height: auto; /* Esto mantiene la proporción de la imagen */
+ } 
+
+@media (max-width: 900px) { 
+    body {
+        background-image: url(./imagenes/fondomediaquery.png); 
+    }
+    #contenedor_imagen {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+   
+}

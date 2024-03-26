@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Juego del 30</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>El Juego del 30</h1>
+    <div><button id="jugar-btn">Jugar</button>
+    <button id= "instrucciones" >INSTRUCCIONES</button></div>
+    <div id="manual" class="hidden"><img id="imagenManual"  src="./imagenes/manual.png" alt="manual"></div>
+    <div id="timer">Tiempo restante: 12 s</div>
+    <div id="contenedor_imagen">  
+        <img src="/imagenes/bitmap1.png" alt="imagen" class="png" id="imagen1"  style="display: none;" >
+        <img src="/imagenes/bitmap2.png" alt="imagen" class="png" id="imagen2"  style="display: none;" >
+        <img src="/imagenes/bitmap4.png" alt="imagen" class="png" id="imagen4"  style="display: none;" >
+        <img src="/imagenes/bitmap5.png" alt="imagen" class="png" id="imagen5"  style="display: none;" >
+        <img src="/imagenes/bitmap6.png" alt="imagen" class="png" id="imagen6"  style="display: none;" >
+        <img src="/imagenes/plus.png" alt="imagen"  class="png" id="imagen"  style="display: none;" > 
+    </div>
+    <div id="player">
+        <h2>Jugador</h2>
+        <div id="player-choice">Elección: </div>
+        
+        <div class="buttons">
+            
+            <button id="boton1"  class="number-btn btn-1" value="1">1</button>
+            <button id="boton2" class="number-btn btn-2" value="2">2</button>
+            <button id="boton3" class="number-btn btn-3" value="3">3</button>
+            <button id="boton4" class="number-btn btn-4" value="4">4</button>
+            <button id="boton5" class="number-btn btn-5" value="5">5</button>
+            <button id="boton6" class="number-btn btn-6" value="6">6</button>
+        </div>
+    </div>
+    <div id="computer">
+        <h2>Computadora</h2>
+        <div id="computer-choice">Elección: </div>
+    </div>
+    <div id="partial-sum">Suma parcial: 0</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
