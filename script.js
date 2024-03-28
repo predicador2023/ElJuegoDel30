@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const computerNumber = Math.floor(Math.random() * 6) + 1;
                 partialSum += computerNumber;
                 updatePartialSum();
-                computerChoiceDisplay.textContent = `Elección computadora: ${computerNumber}`;
+                computerChoiceDisplay.textContent = `  ${computerNumber}`;
                 mostrarImagen(computerNumber);
                 checkEndGame();
                 isPlayerTurn = true;
@@ -107,8 +107,8 @@ document.addEventListener('DOMContentLoaded', function () {
         partialSum = 0;
         timeLeft = 12;
         partialSumDisplay.textContent = `Suma parcial: ${partialSum}`;
-        playerChoiceDisplay.textContent = 'Elección jugador: ';
-        computerChoiceDisplay.textContent = 'Elección computadora: ';
+        playerChoiceDisplay.textContent = '  ';
+        computerChoiceDisplay.textContent = '  ';
         timerDisplay.textContent = `Tiempo: ${timeLeft} s`;
         jugarButton.disabled = false;
         contenedorImagen.innerHTML = ''; // Limpiar las imágenes mostradas
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const number = parseInt(button.value);
                 partialSum += number;
                 updatePartialSum();
-                playerChoiceDisplay.textContent = `Elección jugador: ${number}`;
+                playerChoiceDisplay.textContent = ` ${number}`;
                 mostrarImagen(number);
                 checkEndGame();
                 isPlayerTurn = false;
