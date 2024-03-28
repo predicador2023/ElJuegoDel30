@@ -1,12 +1,20 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-image: url(./imagenes/fondo.jpg);
+    
 }
 h1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .container {
+    
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
     background-color: #ffffff48;
 }
 
@@ -113,13 +121,41 @@ img {
      height: auto; /* Esto mantiene la proporción de la imagen */
  } 
 
+ footer {
+    display: flex;
+    flex-direction: column;
+ }
+.final {
+    justify-content: center;
+    text-align: center;
+}
+
 @media (max-width: 900px) { 
     body {
         background-image: url(./imagenes/fondomediaquery.png); 
+
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom:0;
+        width: 100%;
     }
     #contenedor_imagen {
         flex-wrap: wrap;
         width: 100%;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    .final {
+        justify-content: center;
+        text-align: center;
+       
+        
+       
     }
    
 }

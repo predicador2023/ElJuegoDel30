@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 1000);
     }
 
+
     // Función para reiniciar el temporizador del jugador
     function resetPlayerTimer() {
         clearInterval(timer);
@@ -46,6 +47,8 @@ document.addEventListener('DOMContentLoaded', function () {
         timerDisplay.textContent = `Tiempo restante: ${timeLeft} s`;
         startPlayerTimer();
     }
+
+   
 
     // Función para actualizar la suma parcial en el DOM
     function updatePartialSum() {
@@ -110,6 +113,8 @@ document.addEventListener('DOMContentLoaded', function () {
         jugarButton.disabled = false;
         contenedorImagen.innerHTML = ''; // Limpiar las imágenes mostradas
     }
+
+  
 
     // Evento click para el botón "Jugar"
     jugarButton.addEventListener('click', function() {
