@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function startPlayerTimer() {
         timer = setInterval(() => {
             timeLeft--;
-            timerDisplay.textContent = `Tiempo restante: ${timeLeft} s`;
+            timerDisplay.textContent = `Tiempo: ${timeLeft} s`;
             if (timeLeft === 0) {
                 clearInterval(timer);
                 alert('¡Se acabó el tiempo! Has perdido la partida.');
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function resetPlayerTimer() {
         clearInterval(timer);
         timeLeft = 12;
-        timerDisplay.textContent = `Tiempo restante: ${timeLeft} s`;
+        timerDisplay.textContent = `Tiempo: ${timeLeft} s`;
         startPlayerTimer();
     }
 
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
         partialSumDisplay.textContent = `Suma parcial: ${partialSum}`;
         playerChoiceDisplay.textContent = 'Elección jugador: ';
         computerChoiceDisplay.textContent = 'Elección computadora: ';
-        timerDisplay.textContent = `Tiempo restante: ${timeLeft} s`;
+        timerDisplay.textContent = `Tiempo: ${timeLeft} s`;
         jugarButton.disabled = false;
         contenedorImagen.innerHTML = ''; // Limpiar las imágenes mostradas
     }

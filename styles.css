@@ -99,13 +99,14 @@ h1 {
     font-weight: bold; 
 }
 #timer {
-    margin-top: 20px;
-    font-size: 22px;
+    margin-top: 15px;
+    font-size: 30px;
     font-weight: bold;
+    color: red;
 }
 #partial-sum {
-    margin-top: 20px;
-    font-size: 22px;
+    margin-top: 10px;
+    font-size: 20px;
     font-weight: bold; 
 
 }
@@ -113,7 +114,7 @@ h1 {
 #contenedor_imagen {
     display: flex;
     flex-direction: row;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 img {
@@ -130,7 +131,8 @@ img {
     text-align: center;
 }
 
-@media (max-width: 900px) { 
+@media (max-width: 900px) 
+{ 
     body {
         background-image: url(./imagenes/fondomediaquery.png); 
 
@@ -142,12 +144,29 @@ img {
         bottom: 0 ;
         width: 100%;
     }
+
+    .contenedorEleccion{
+        display: flex;
+        justify-content: center;
+    }
     #contenedor_imagen {
         flex-wrap: wrap;
         width: 100%;
         justify-content: center;
         text-align: center;
     
+    }
+
+    #player {
+        justify-content: center;
+        margin: auto;
+        font-size: 13px;
+    }
+
+    #computer {
+        justify-content: center;
+        margin: auto;
+        font-size: 13px;
     }
 
     .final {
