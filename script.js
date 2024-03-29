@@ -13,6 +13,17 @@ document.addEventListener('DOMContentLoaded', function () {
     let timeLeft = 12;
     let timer;
 
+    //Función para efecto de sonido al dar click en el boton instrucciones
+   
+      //  const instrucciones = document.getElementById('instrucciones');
+        const audio = document.getElementById('audio');
+    
+        instrucciones.addEventListener('click', function () {
+            audio.play();
+        });
+   
+    
+
     // Función para leer las instrucciones del juego
     mostrar.addEventListener('click', function() {
         var image = document.getElementById('manual');
