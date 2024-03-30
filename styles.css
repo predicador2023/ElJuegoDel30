@@ -18,6 +18,15 @@ h1 {
     background-color: #ffffff48;
 }
 
+#mensajeResultado {
+    font-size: 22px;
+    margin: 20px;
+    font-weight: bold; 
+    color: red;
+}
+
+
+
 .buttons {
     margin-top: 15px;
 }

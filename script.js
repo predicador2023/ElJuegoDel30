@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const jugarButton = document.getElementById('jugar-btn');
     const contenedorImagen = document.getElementById('contenedor_imagen');
     const mostrar = document.getElementById('instrucciones');
+    const resultado = document.getElementById('mensajeResultado');
+    
     let partialSum = 0;
     let isPlayerTurn = false;
     let timeLeft = 12;
@@ -41,13 +43,15 @@ document.addEventListener('DOMContentLoaded', function () {
     function startPlayerTimer() {
         timer = setInterval(() => {
             timeLeft--;
-            timerDisplay.textContent = `Tiempo: ${timeLeft} s`;
+            timerDisplay.textContent = ` ${timeLeft} s`;
             if (timeLeft === 0) {
+                
                 clearInterval(timer);
-                alert('¡Se acabó el tiempo! Has perdido la partida.');
+                //alert('¡Se acabó el tiempo! Has perdido la partida.');
+                resultado.innerHTML = '¡ Se te acabó el tiempo, has perdido !';
                 resetGame();
             }
-        }, 1000);
+        }, 1200);
     }
 
 
@@ -55,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function resetPlayerTimer() {
         clearInterval(timer);
         timeLeft = 12;
-        timerDisplay.textContent = `Tiempo: ${timeLeft} s`;
+        timerDisplay.textContent = ` ${timeLeft} s`;
         startPlayerTimer();
     }
 
@@ -85,8 +89,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Función para el turno de la computadora
     function computerTurn() {
+       
         setTimeout(() => { // Agrega un retraso de un segundo antes de mostrar la imagen del computador
             if (!isPlayerTurn) {
+                resultado.innerHTML = '';   // Limpia el resultado de pantalla
                 const computerNumber = Math.floor(Math.random() * 6) + 1;
                 partialSum += computerNumber;
                 updatePartialSum();
@@ -95,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 checkEndGame();
                 isPlayerTurn = true;
             }
-        }, 1000); // Retraso de un segundo en milisegundos
+        }, 1200); // Retraso de un segundo en milisegundos pero en segundos será 1,2 segundos de retraso
     }
 
     // Función para verificar el final del juego
@@ -107,9 +113,12 @@ document.addEventListener('DOMContentLoaded', function () {
             } else {
                 winner = 'Computadora';
             }
-            alert(`${winner} ha ganado!`);
+            resultado.innerHTML= ` ¡ ${winner} ha ganado!`;
+           // alert(`${winner} ha ganado!`);
             resetGame();
+          
         }
+        
     }
 
     // Función para reiniciar el juego
@@ -120,24 +129,30 @@ document.addEventListener('DOMContentLoaded', function () {
         partialSumDisplay.textContent = `Suma parcial: ${partialSum}`;
         playerChoiceDisplay.textContent = '  ';
         computerChoiceDisplay.textContent = '  ';
-        timerDisplay.textContent = `Tiempo: ${timeLeft} s`;
+        timerDisplay.textContent = ` ${timeLeft} s`;
         jugarButton.disabled = false;
         contenedorImagen.innerHTML = ''; // Limpiar las imágenes mostradas
+        
     }
 
   
 
     // Evento click para el botón "Jugar"
     jugarButton.addEventListener('click', function() {
+        
         isPlayerTurn = true;
         startPlayerTimer();
         jugarButton.disabled = true;
+      
     });
 
     // Evento click para cada botón de número
-    numberButtons.forEach(button => {
+     numberButtons.forEach(button => {
+       
         button.addEventListener('click', function () {
+            resultado.innerHTML = '';   // Limpia el resultado de pantalla
             if (isPlayerTurn) {
+                
                 const number = parseInt(button.value);
                 partialSum += number;
                 updatePartialSum();
